@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 
 
-const DBLink = "";
-const DBName = "";
 async function connectDB(){
    try{
     const response = await mongoose.connect(`${process.env.MONGODB_URI}/${process.env.MONGODB_NAME}`);
