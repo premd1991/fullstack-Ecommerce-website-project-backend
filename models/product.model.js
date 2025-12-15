@@ -1,15 +1,21 @@
 import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
-    title:{
+    Name:{
         type: String,
         required: true,
     },
-    description:{
+    Description:{
         type: String,
         required: true,
     },
-    price:{
+    createdby:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "user",
+        required: true
+    }
+
+    Price:{
         type: String,
         required: true,
     },
