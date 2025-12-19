@@ -6,6 +6,7 @@ import dotenv  from "dotenv";
 import path from "path";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import { useEffect } from "react";
 
 dotenv.config({path: path.resolve("./.env")})
 
@@ -25,6 +26,14 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/v1/product", productRouter);
 app.use("/api/v1/user", userRouter);
+
+useEffect(()=>{
+    fetch("http://localhost:3000/api/products/kids")
+    .then(res => res.json())
+    .then(data => setproduct(data));
+}, [])
+
+
 
 app.get("/", (req, res)=>{
     return res.status(200).json({message: "Welcome from server!"})

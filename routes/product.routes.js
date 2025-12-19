@@ -1,6 +1,6 @@
 import { Router } from "express"
 import { handleCreateNewProduct, handleGetAllProducts, 
-handleGetSingleProduct, handleAddSingleProduct, handleDeleteSingleProduct 
+handleGetMenProduct, handleGetWomenProduct, handleKidsProduct 
 } from "../controllers/product.controller.js";
 import { handleVerifyUserLogin } from "../middlewares/auth.middleware.js";
 
@@ -13,10 +13,10 @@ router.route("/").post(handleCreateNewProduct);
 
 router.route("/").get(handleGetAllProducts);
 
-router.route("/:id").get(handleGetSingleProduct);
+router.route("/men").get(handleGetMenProduct);
 
-router.route("/:id").patch(handleAddSingleProduct);
+router.route("/women").patch(handleGetWomenProduct);
 
-router.route("/:id").delete(handleDeleteSingleProduct);
+router.route("/kids").delete(handleKidsProduct);
 
 export default router;

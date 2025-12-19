@@ -1,0 +1,113 @@
+  {
+  "category": "women",
+  "total": 20,
+  "products":
+  
+ 
+ [
+    {
+      "title": "Women Floral Kurti",
+      "category": "women",
+      "brand": "Biba",
+      "price": 1999,
+      "discount": 20,
+      "sizes": ["S", "M", "L", "XL"],
+      "color": "Pink",
+      "rating": 4.6,
+      "stock": 80,
+      "images": ["https://images.unsplash.com/photo-1520975916090-3105956dac38"],
+      "description": "Elegant floral kurti for daily wear"
+    },
+    {
+      "title": "Women Cotton Saree",
+      "category": "women",
+      "brand": "Suta",
+      "price": 3499,
+      "discount": 15,
+      "sizes": ["Free"],
+      "color": "Blue",
+      "rating": 4.7,
+      "stock": 40,
+      "images": ["https://images.unsplash.com/photo-1583391733956-3750e0ff26f8"],
+      "description": "Premium cotton saree"
+    },
+    {
+      "title": "Women Casual Top",
+      "category": "women",
+      "brand": "H&M",
+      "price": 1299,
+      "discount": 25,
+      "sizes": ["S", "M", "L"],
+      "color": "White",
+      "rating": 4.4,
+      "stock": 120,
+      "images": ["https://images.unsplash.com/photo-1520974735194-6c2d2d94f0fa"],
+      "description": "Stylish casual top"
+    },
+    {
+      "title": "Women Skinny Jeans",
+      "category": "women",
+      "brand": "Levi's",
+      "price": 2799,
+      "discount": 30,
+      "sizes": ["28", "30", "32"],
+      "color": "Dark Blue",
+      "rating": 4.5,
+      "stock": 70,
+      "images": ["https://images.unsplash.com/photo-1541099649105-f69ad21f3246"],
+      "description": "Trendy skinny fit jeans"
+    },
+    {
+      "title": "Women Handbag",
+      "category": "women",
+      "brand": "Lavie",
+      "price": 2499,
+      "discount": 35,
+      "sizes": ["Free"],
+      "color": "Brown",
+      "rating": 4.6,
+      "stock": 60,
+      "images": ["https://images.unsplash.com/photo-1590874103328-eac38a683ce7"],
+      "description": "Stylish everyday handbag"
+    },
+    {
+      "title": "Women Running Shoes",
+      "category": "women",
+      "brand": "Nike",
+      "price": 4899,
+      "discount": 20,
+      "sizes": ["6", "7", "8", "9"],
+      "color": "White",
+      "rating": 4.8,
+      "stock": 45,
+      "images": ["https://images.unsplash.com/photo-1528701800489-20be3c06f84b"],
+      "description": "Lightweight running shoes"
+    },
+    {
+      "title": "Women Winter Jacket",
+      "category": "women",
+      "brand": "Zara",
+      "price": 5999,
+      "discount": 40,
+      "sizes": ["S", "M", "L"],
+      "color": "Black",
+      "rating": 4.7,
+      "stock": 35,
+      "images": ["https://images.unsplash.com/photo-1517841905240-472988babdf9"],
+      "description": "Warm winter jacket"
+    },
+    {
+      "title": "Women Heels",
+      "category": "women",
+      "brand": "Catwalk",
+      "price": 2299,
+      "discount": 25,
+      "sizes": ["5", "6", "7", "8"],
+      "color": "Red",
+      "rating": 4.5,
+      "stock": 55,
+      "images": ["https://images.unsplash.com/photo-1528701800489-20be3c06f84b"],
+      "description": "Elegant party heels"
+    }
+  ]
+  }
