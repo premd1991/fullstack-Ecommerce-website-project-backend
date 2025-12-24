@@ -1,3 +1,4 @@
+import sliderData from "../data/sliderData.js";
 
 
 export async function handleCreateNewProduct (req, res){
@@ -8,14 +9,19 @@ export async function handleGetAllProducts (req, res){
 
 }
 
-export async function handleGetMenProduct (req, res){
-   res.send("men page Data")
+export function handleGetMenProduct (req, res){
+   res.json(menProducts);
 }
 
-export async function handleGetWomenProduct (req, res){
+export function handleGetWomenProduct (req, res){
+   res.json(womenProducts);
+}
+
+export function handleGetKidsProduct (req, res){
+   res.json(kidsProducts);
 
 }
 
-export async function handleKidsProduct (req, res){
-
+export function handleSliderProducts(req, res){
+   res.status(200).json(sliderData);
 }
