@@ -2,6 +2,8 @@ import User from "../models/user.model.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
+const saltRounds = 12;
+
 export async function handleCreateNewUser(req, res){
   
    try { 
@@ -10,6 +12,7 @@ export async function handleCreateNewUser(req, res){
     if (!firstName || !lastName || !email || !password) {
       return res.status(400).json({ message: "some data is missing"});
     }
+    console.log(firstName);
 
     bcrypt.genSalt(saltRounds, async function(err, salt) {
     bcrypt.hash(password, salt, async function(err, hash) {
@@ -38,11 +41,11 @@ export async function handleLoginUser(req, res) {
       return res.status(400).json({ messages: "some data is missing" });
     }
 
-    let dbUser = await User.findOne({ email, password });
+    let dbUser = await User.findOne({ email });
     if (!dbUser) {
       return res.status(404).json({ message: "no user found" });
     }
-    let token = jwt.sign(
+    let accesstoken = jwt.sign(
       {
         _id: dbUser._id,
         email: dbUser.email,
@@ -55,11 +58,11 @@ export async function handleLoginUser(req, res) {
 
     res.cookie("accessToken", accesstoken, {
           maxAge: 1000 * 60 * 60 * 2,
-          origin: "http://localhost:5173"
+          // origin: "http://localhost:5173"
 
     });
 
-      res.cookies("refreshToken", refreshToken,{
+      res.cookie("refreshToken", refreshToken,{
         maxAge : 1000 * 60 * 60 * 24 * 5
 
       });

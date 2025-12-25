@@ -7,7 +7,7 @@ const router = Router();
 
 router.route("/register").post(handleCreateNewUser);
 
-router.route("/Login").post(handleLoginUser);
+router.route("/login").post(handleLoginUser);
 
 router.route("/logout").get(handleVerifyUserLogin,handleLogoutUser);
 
